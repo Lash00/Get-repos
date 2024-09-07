@@ -95,3 +95,8 @@ position: relative;
     font-size: 3vh;
 }
 }
+@media only screen and (max-width: 520px) {
+    .black{
+  width: 100%;
+}
+}
