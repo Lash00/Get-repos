@@ -9,10 +9,16 @@ button.addEventListener("click",function()    {
     console.log(name);
     let text=`https://api.github.com/users/${name}/repos`;
     console.log(text);
-    fetch(text)
-    .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
+    if(name==="") {
+ create("Please Enter Ur User-name...");
+    }
+    else {
+fetch(text)
+.then(response => {
+  if (!response.ok) {
+    create("Rong User-Name......");
+    throw new Error('Network response was not ok');
+
         }
     
         return response.json();;
@@ -23,13 +29,20 @@ button.addEventListener("click",function()    {
         });
     })
       .then(print => {
-        nameOfrepos.forEach(element => {
-          create(element);
-        });
+        if(nameOfrepos.length===0)
+        {
+          create("U dont Have any repos yet......");
+        }
+        else {
+          nameOfrepos.forEach(element => {
+            create(element);
+          });
+        }
     });
     document.getElementById("name").value="";
     nameOfrepos=[];
 
+}
 }
 );
 
