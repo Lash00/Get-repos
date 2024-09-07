@@ -12,7 +12,7 @@ position: relative;
     flex-wrap: wrap;
 }
 .left{
-    height: 40vh;
+    height: 43vh;
     width: 70%;
     background: linear-gradient(45deg,rgb(49, 207, 247),rgb(255, 255, 255));
     text-align: center;
@@ -30,11 +30,16 @@ position: relative;
 }
 .form label{
     margin: 16px;
+    color: #ff50a8;
+    font-weight: bolder;
+}
+.form label span{
+    color: white;
 }
 .form input[type='button']
 {
     width: 180px;
-    margin-top: 18px;
+    margin-top: 15px;
     border-radius: 16px;
     outline: none;
     border: none;
@@ -45,9 +50,20 @@ position: relative;
     padding: 6px;
     text-align: center;
     margin-bottom: 14px;
+    cursor: pointer;
 }
 .form input[type='text']{
     margin-top: 14px;
+    margin-top: 14px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 6px;
+
+}
+.form input[type='text']:focus{
+    border: 2px solid;
+    border-color: rgb(216, 14, 139);
 }
 
 .right{
@@ -76,6 +92,7 @@ position: relative;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    word-break: break-all;
 }
 @media only screen and (max-width: 767px) {
    .container{
@@ -95,8 +112,14 @@ position: relative;
     font-size: 3vh;
 }
 }
-@media only screen and (max-width: 520px) {
+/* @media only screen and (max-width: 520px) {
     .black{
   width: 100%;
-}
-}
+  word-break: break-all;
+} 
+}*/
+.right a{
+    text-decoration: none;
+    color: #2089a3;
+    font-weight: bolder;
+    font-family: system-ui;}
